@@ -24,7 +24,7 @@ def __aggiungiVoto(filepath):
         break
 
 def __vediMedia(filepath, metodo, cognome, nome):
-    numeri = []  # Lista per memorizzare i numeri dei voti
+    numeri = []
 
     with open(filepath, 'r') as file:
         reader = csv.reader(file)
@@ -63,7 +63,7 @@ def __vediMedia(filepath, metodo, cognome, nome):
             print(f"L'alunn* {cognome} {nome} non ha voti pratici")
 
 def __listaVoti(filepath):
-    voti = []  # Lista per memorizzare i voti
+    voti = []
 
     with open(filepath, 'r') as file:
         reader = csv.reader(file)
@@ -80,31 +80,35 @@ def __listaVoti(filepath):
 
 def menuAlunno(filepath, nome, cognome):
     while True:
-        Funzioni.start()
-        print("")
+        Funzioni.start()                                        # Chiama la funzione start() del modulo Funzioni
+
+        print("")                                               # Mostra le opzioni tra cui scegliere
         print("1 - Aggiungere un voto")
         print("2 - Vedere la media generale")
         print("3 - Vedere la media pratica")
         print("4 - Vedere la media orale")
         print("5 - Vedere la lista dei voti")
         print("6 - Uscire dal profilo alunn*")
-        comando = input(" " + nome + " " + cognome + " >> ")
+
+        comando = input(" " + nome + " " + cognome + " >> ")    # Richiede all'utente di scegliere un opzione
+
         print("")
-        if comando == "1":
+
+        if comando == "1":                                      # Chiama la funzione __aggiungiVoto() 
             __aggiungiVoto(filepath)
-        elif comando == "2":
-            __vediMedia(filepath, "g", cognome, nome)
-        elif comando == "3":
+        elif comando == "2":                                    # Chiama la funzione __vediMedia() con argomento "g" per richiedere la media di tutti i voti
+            __vediMedia(filepath, "g", cognome, nome)  
+        elif comando == "3":                                    # Chiama la funzione __vediMedia() con argomento "p" per richiedere la media di tutti i voti pratici
             __vediMedia(filepath, "p", cognome, nome)
-        elif comando == "4":
+        elif comando == "4":                                    # Chiama la funzione __vediMedia() con argomento "o" per richiedere la media di tutti i voti orali
             __vediMedia(filepath, "o", cognome, nome)
-        elif comando == "5":
+        elif comando == "5":                                    # Chiama la funzione __listaVoti() per richiedere la media di tutti i voti
             voti = __listaVoti(filepath)
             for voto in voti:
                 colonna0, colonna1, tipo_compito = voto
                 print(f"{colonna0} {colonna1} {tipo_compito}")
-        elif comando == "6":
+        elif comando == "6":                                    # Ferma la funzione e fa uscire dal profilo alunn*
             print("Sei uscito dal profilo alunn*")
             break
-        else:
+        else:                                                   # Comunica se il comando non è stato riconosciuto
             print("Comando non riconosciuto.")
