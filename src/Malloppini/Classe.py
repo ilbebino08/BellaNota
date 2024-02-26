@@ -111,29 +111,29 @@ class Classe:
         Funzioni.compito(self.directory, data, tipo)                                                # Se il tipo di compito inserito è valido, chiama la funzione "compito" del modulo "Funzioni" per aggiungere il compito alla classe
 
 
-def __eliminaAlunno(self):                                                                          # Elimina un profilo alunn* dalla classe
-    print("Inserire nome dell'alunn*")                                                              # Richiede il nome dell'alunn*
-    nome = input(" ").capitalize()
-    print("Inserire cognome dell'alunn*")                                                           # Richiede il cognome dell'alunn*
-    cognome = input(" ").capitalize()
+    def __eliminaAlunno(self):                                                                          # Elimina un profilo alunn* dalla classe
+        print("Inserire nome dell'alunn*")                                                              # Richiede il nome dell'alunn*
+        nome = input(" ").capitalize()
+        print("Inserire cognome dell'alunn*")                                                           # Richiede il cognome dell'alunn*
+        cognome = input(" ").capitalize()
+        
+        nome_file = f"{cognome}{nome}.csv"                                                              # Costruisce il nome del file del profilo dell'alunn*
+        filepath = os.path.join(self.directory, nome_file)                                              # Crea il percorso completo del file
     
-    nome_file = f"{cognome}{nome}.csv"                                                              # Costruisce il nome del file del profilo dell'alunn*
-    filepath = os.path.join(self.directory, nome_file)                                              # Crea il percorso completo del file
-
-    if os.path.exists(filepath):                                                                    # Se il file del profilo esiste
-        print(f"Sei sicuro di voler eliminare il profilo alunn* {cognome} {nome}? (S/n)")           # Chiede all'utente la conferma per l'eliminazione del profilo
-        risposta = input(" ")
-
-        if risposta == "S":                                                                         # Se l'utente conferma l'eliminazione del profilo
-            os.remove(filepath)                                                                     # Elimina il profilo
-            print(f"Il profilo alunn* di {cognome} {nome} è stata eliminata correttamente.")        # Stampa un messaggio di conferma
-        elif risposta == "n":                                                                       # Se l'utente annulla l'eliminazione del profilo
-            print("Operazione annullata")                                                           # Stampa un messaggio di conferma
-        else:                                                                                       # Se l'utente inserisce un comando sconosciuto
-            print("Comando non riconosciuto")                                                       # Stampa un messaggio di errore
-        return
-
-    print(f"Il profilo dell'alunn* {cognome} {nome} non esiste")                                    # Stampa un messaggio se il profilo dell'alunno non esiste
+        if os.path.exists(filepath):                                                                    # Se il file del profilo esiste
+            print(f"Sei sicuro di voler eliminare il profilo alunn* {cognome} {nome}? (S/n)")           # Chiede all'utente la conferma per l'eliminazione del profilo
+            risposta = input(" ")
+    
+            if risposta == "S":                                                                         # Se l'utente conferma l'eliminazione del profilo
+                os.remove(filepath)                                                                     # Elimina il profilo
+                print(f"Il profilo alunn* di {cognome} {nome} è stata eliminata correttamente.")        # Stampa un messaggio di conferma
+            elif risposta == "n":                                                                       # Se l'utente annulla l'eliminazione del profilo
+                print("Operazione annullata")                                                           # Stampa un messaggio di conferma
+            else:                                                                                       # Se l'utente inserisce un comando sconosciuto
+                print("Comando non riconosciuto")                                                       # Stampa un messaggio di errore
+            return
+    
+        print(f"Il profilo dell'alunn* {cognome} {nome} non esiste")                                    # Stampa un messaggio se il profilo dell'alunno non esiste
 
 
     def select_classe(self):                                                                        # Funzione che avvia il menu principale della classe con tutti i comandi disponibili
