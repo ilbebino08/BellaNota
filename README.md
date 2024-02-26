@@ -1,4 +1,4 @@
-<img src="https://github.com/ilbebino08/BellaNota/blob/main/resources/LogoSitoTB.png?raw=true" alt="logo" align="left" height="90"/>
+<img src="https://github.com/ilbebino08/BellaNota/blob/main/resources/LogoSitoTB.png?raw=true" alt="logo" align="left" height="100"/>
 
 # BellaNota <br> ![GitHub top language](https://img.shields.io/github/languages/top/ilbebino08/BellaNota)   ![GitHub License](https://img.shields.io/github/license/ilbebino08/BellaNota) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ilbebino08/BellaNota) ![GitHub last commit](https://img.shields.io/github/last-commit/ilbebino08/BellaNota) [![Static Badge](https://img.shields.io/badge/Run%20on%20Replit-gray?logo=replit)](https://repl.it/github/ilbebino08/BellaNota)
 
