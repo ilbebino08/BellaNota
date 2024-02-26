@@ -1,8 +1,6 @@
-[![Run on Repl.it](https://repl.it/badge/github/ilbebino08/BellaNota)](https://repl.it/github/ilbebino08/BellaNota)
-
 <img src="https://github.com/ilbebino08/BellaNota/blob/main/resources/LogoSitoTB.png?raw=true" alt="logo" align="left" height="90"/>
 
-# BellaNota <br> ![GitHub top language](https://img.shields.io/github/languages/top/ilbebino08/BellaNota)   ![GitHub License](https://img.shields.io/github/license/ilbebino08/BellaNota) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ilbebino08/BellaNota) ![GitHub last commit](https://img.shields.io/github/last-commit/ilbebino08/BellaNota) [![Static Badge](https://img.shields.io/badge/Try%20on%20Replit-gray?logo=replit)](https://repl.it/github/ilbebino08/BellaNota)
+# BellaNota <br> ![GitHub top language](https://img.shields.io/github/languages/top/ilbebino08/BellaNota)   ![GitHub License](https://img.shields.io/github/license/ilbebino08/BellaNota) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ilbebino08/BellaNota) ![GitHub last commit](https://img.shields.io/github/last-commit/ilbebino08/BellaNota) [![Static Badge](https://img.shields.io/badge/Run%20on%20Replit-gray?logo=replit)](https://repl.it/github/ilbebino08/BellaNota)
 
 ## The project
 This project was born as a school project to do something different during the summer holidays and to encourage me to study Python.
