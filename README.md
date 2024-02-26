@@ -1,9 +1,6 @@
 <img src="https://github.com/ilbebino08/BellaNota/blob/main/resources/LogoSitoTB.png?raw=true" alt="logo" align="left" height="100"/>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# BellaNota <br> ![GitHub top language](https://img.shields.io/github/languages/top/ilbebino08/BellaNota)   ![GitHub License](https://img.shields.io/github/license/ilbebino08/BellaNota) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ilbebino08/BellaNota) ![GitHub last commit](https://img.shields.io/github/last-commit/ilbebino08/BellaNota) [![Static Badge](https://img.shields.io/badge/Run%20on%20Replit-gray?logo=replit)](https://repl.it/github/ilbebino08/BellaNota)
+# BellaNota <br> [![GitHub top language](https://img.shields.io/github/languages/top/ilbebino08/BellaNota)](https://www.python.org/) [![GitHub License](https://img.shields.io/github/license/ilbebino08/BellaNota)](https://github.com/ilbebino08/BellaNota?tab=Unlicense-1-ov-file#readme) [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ilbebino08/BellaNota)](https://github.com/ilbebino08/BellaNota/graphs/commit-activity) [![GitHub last commit](https://img.shields.io/github/last-commit/ilbebino08/BellaNota)](https://github.com/ilbebino08/BellaNota/graphs/commit-activity) [![Static Badge](https://img.shields.io/badge/Run%20on%20Replit-gray?logo=replit)](https://repl.it/github/ilbebino08/BellaNota) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors-)
 
 ## The project
 This project was born as a school project to do something different during the summer holidays and to encourage me to study Python.
