@@ -1,17 +1,35 @@
 import os
 import csv
 import datetime
+from Malloppini.Alunno import Alunno
 
-def start():
+def selezionaAlunno(parent_dir, classe):                                                                  # Seleziona un profilo alunn* e avvia il menu dell'alunno
+  while True:
+    print("Inserire nome dell'alunn*")                                                                    # Richiede di inserire il nome dell'alunn* e mette le iniziali maiuscole
+    nome = input(" ").capitalize()
+    print("Inserire cognome dell'alunn*")                                                                 # Richiede all'utente di inserire il cognome dell'alunn* e mette le iniziali maiuscole
+    cognome = input(" ").capitalize()
+
+    nome_file = f"{cognome}{nome}.csv"                                                                    # Costruisce il nome del file del profilo dell'alunn*
+    filepath = os.path.join(parent_dir, nome_file)                                                        # Crea il percorso completo del file
+
+    if os.path.exists(parent_dir):                                                                        # Controlla se il file del profilo esiste
+      filepath = parent_dir
+      mioAlunno = Alunno(nome, cognome, parent_dir)
+      mioAlunno.menuAlunno()
+      break
+    print(f"Il profilo dell'alunn* {cognome} {nome} non esiste")                                          # Stampa un messaggio di errore se il profilo non esiste
+
+def start():                                                                                              # Stampa la splash screen
   print("")
   print("")
-  print("Premere invio per continuare")
+  print("Premere invio per continuare")                                                                   # Aspetta la conferma dall'utente
   input("")
-  if os.name == 'nt':
+  if os.name == 'nt':                                                                                     # Pulisce il terminale per Windows
     os.system('cls')
-  else:
+  else:                                                                                                   # Pulisce il terminale per Linux
     os.system('clear')
-  print("╔══╗───╔╗╔╗───╔═╗─╔╗──╔╗")
+  print("╔══╗───╔╗╔╗───╔═╗─╔╗──╔╗")                                                                       # Stampa la splash screen
   print("║╔╗║───║║║║───║║╚╗║║─╔╝╚╗")
   print("║╚╝╚╦══╣║║║╔══╣╔╗╚╝╠═╩╗╔╬══╗")
   print("║╔═╗║║═╣║║║║╔╗║║╚╗║║╔╗║║║╔╗║")
@@ -19,7 +37,7 @@ def start():
   print("╚═══╩══╩═╩═╩╝╚╩╝─╚═╩══╩═╩╝╚╝")
   print("Created by Tommaso Bellandi")
 
-def compito(directory, data, tipo):                                 #Definisco la funzione compito
+def compito(directory, data, tipo):                                                                       # Definisco la funzione compito
   files = os.listdir(directory)
   csv_files = [file for file in files if file.endswith('.csv')]
   for file in csv_files:
