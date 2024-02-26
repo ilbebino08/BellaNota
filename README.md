@@ -26,7 +26,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ilbebino08"><img src="https://avatars.githubusercontent.com/u/154010870?v=4?s=100" width="100px;" alt="Ilbebino08"/><br /><sub><b>Ilbebino</b></sub></a><br /><a href="https://github.com/ilbebino08/BellaNota/commits?author=ilbebino08" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://bit.ly/m/ilbebinonessuno"><img src="https://avatars.githubusercontent.com/u/154010870?v=4?s=100" width="100px;" alt="Ilbebino"/><br /><sub><b>Ilbebino</b></sub></a><br /><a href="https://github.com/ilbebino08/BellaNota/commits?author=ilbebino08" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ilbebe"><img src="https://avatars.githubusercontent.com/u/49651497?v=4?s=100" width="100px;" alt="ilbebe"/><br /><sub><b>ilbebe</b></sub></a><br /><a href="https://github.com/ilbebino08/BellaNota/commits?author=ilbebe" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
