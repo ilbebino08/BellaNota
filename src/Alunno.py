@@ -1,4 +1,4 @@
-from Malloppini import Funzioni                                                     # Importa i moduli necessari
+import Funzioni                                                                     # Importa i moduli necessari
 import csv
 
 def __aggiungiVoto(filepath):

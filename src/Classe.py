@@ -1,5 +1,5 @@
-from Malloppini import Funzioni
-from Malloppini import Alunno
+import Funzioni
+import Alunno
 import os
 import csv
 

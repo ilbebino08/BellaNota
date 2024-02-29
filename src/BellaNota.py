@@ -1,6 +1,4 @@
-from Malloppini.MenuPrincipale import MenuPrincipale                            # Importa i moduli necessari
-from Malloppini import Funzioni
-from Malloppini import Alunno
+from MenuPrincipale import MenuPrincipale                                       # Importa i moduli necessari
 import os
 import json
 import sys

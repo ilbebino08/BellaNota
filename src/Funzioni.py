@@ -1,7 +1,7 @@
 import os
 import csv
 import datetime
-from Malloppini.Alunno import Alunno
+import Alunno
 
 def selezionaAlunno(parent_dir, classe):                                                                  # Seleziona un profilo alunn* e avvia il menu dell'alunno
   while True:

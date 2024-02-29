@@ -1,6 +1,5 @@
-from Malloppini.Classe import Classe
-from Malloppini import Funzioni
-from Malloppini import Alunno
+from Classe import Classe
+import Funzioni
 import os
 import csv
 
