@@ -1,9 +1,6 @@
 <img src="https://github.com/ilbebino08/BellaNota/blob/main/resources/LogoSitoTB.png?raw=true" alt="logo" align="left" height="100"/>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# BellaNota <br> ![GitHub top language](https://img.shields.io/github/languages/top/ilbebino08/BellaNota)   ![GitHub License](https://img.shields.io/github/license/ilbebino08/BellaNota) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ilbebino08/BellaNota) ![GitHub last commit](https://img.shields.io/github/last-commit/ilbebino08/BellaNota) [![Static Badge](https://img.shields.io/badge/Run%20on%20Replit-gray?logo=replit)](https://repl.it/github/ilbebino08/BellaNota)
+# BellaNota <br> [![GitHub top language](https://img.shields.io/github/languages/top/ilbebino08/BellaNota)](https://www.python.org/) [![GitHub License](https://img.shields.io/github/license/ilbebino08/BellaNota)](https://github.com/ilbebino08/BellaNota?tab=Unlicense-1-ov-file#readme) [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ilbebino08/BellaNota)](https://github.com/ilbebino08/BellaNota/graphs/commit-activity) [![GitHub last commit](https://img.shields.io/github/last-commit/ilbebino08/BellaNota)](https://github.com/ilbebino08/BellaNota/graphs/commit-activity) [![Static Badge](https://img.shields.io/badge/Run%20on%20Replit-gray?logo=replit)](https://repl.it/github/ilbebino08/BellaNota) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors-)
 
 ## The project
 This project was born as a school project to do something different during the summer holidays and to encourage me to study Python.
@@ -30,6 +27,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://bit.ly/m/ilbebinonessuno"><img src="https://avatars.githubusercontent.com/u/154010870?v=4?s=100" width="100px;" alt="Ilbebino"/><br /><sub><b>Ilbebino</b></sub></a><br /><a href="https://github.com/ilbebino08/BellaNota/commits?author=ilbebino08" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ilbebe"><img src="https://avatars.githubusercontent.com/u/49651497?v=4?s=100" width="100px;" alt="ilbebe"/><br /><sub><b>ilbebe</b></sub></a><br /><a href="https://github.com/ilbebino08/BellaNota/commits?author=ilbebe" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ilbebinonessuno"><img src="https://avatars.githubusercontent.com/u/107624712?v=4?s=100" width="100px;" alt="ilbebinonessuno"/><br /><sub><b>ilbebinonessuno</b></sub></a><br /><a href="https://github.com/ilbebino08/BellaNota/commits?author=ilbebinonessuno" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
