@@ -3,7 +3,6 @@ import os
 import json
 import sys
 
-#else:                                                                            Se non ci sono argomenti, imposta il file di configurazione in base all'OS
 if os.name == 'nt':                                                             # Win
     settings_file = "settings_win.json"
 else:                                                                           # Linux based
@@ -45,10 +44,10 @@ if len(sys.argv) > 1:                                                           
 
 print(command_path)                                                             # Stampa il percorso del file di configurazione e il valore della chiave 'workdir' dai dati letti
 print(data['workdir'])
-workdir = data['workdir']
-if not os.path.exists(workdir):
-    os.mkdir(workdir)
-    print(f"Cartella dei file creata in {workdir}")
+parent_dir = data['workdir']
+if not os.path.exists(parent_dir):
+    os.mkdir(parent_dir)
+    print(f"Cartella dei file creata in {parent_dir}")
 
 print("╔══╗───╔╗╔╗───╔═╗─╔╗──╔╗")                                               # Stampa una splash screen
 print("║╔╗║───║║║║───║║╚╗║║─╔╝╚╗")
@@ -58,7 +57,7 @@ print("║╚═╝║║═╣╚╣╚╣╔╗║║─║║║╚╝║╚�
 print("╚═══╩══╩═╩═╩╝╚╩╝─╚═╩══╩═╩╝╚╝")
 print("Created by Tommaso Bellandi")
 
-menuPrincipale = MenuPrincipale(workdir)                                        # Crea un'istanza della classe MenuPrincipale
+menuPrincipale = MenuPrincipale(parent_dir)                                     # Crea un'istanza della classe MenuPrincipale
 menuPrincipale.inizio()                                                         # Iniziallizza il menu principale
 
 print("Grazie per aver utilizzato BellaNota")                                   # Alla chiusura del programma stampa un messaggio di ringraziamento
