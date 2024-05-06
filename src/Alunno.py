@@ -2,7 +2,7 @@ import Funzioni                                                                 
 import csv
 
 class Alunno:
-    def __init__(self, parent_dir, self.nome, self.cognome):
+    def __init__(self, parent_dir, nome, cognome):
         self.parent_dir = parent_dir
         self.nome       = nome
         self.cognome    = cognome
