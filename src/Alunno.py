@@ -62,25 +62,25 @@ class Alunno:
         if len(numeri) > 0:                                                                 # Se ci sono voti nella lista numeri
             media = sum(numeri) / len(numeri)                                               # Calcola la media dei voti
             media = round(media, 2)                                                         # Arrotonda la media a due cifre decimali
-            if metodo == "g":                                                               # Se il metodo è "g", stampa la media generale dell'alunn*
-                print(f"La media dell'alunn* {self.cognome} {self.nome} è {media}")
-            elif metodo == "o":                                                             # Se il metodo è "o", stampa la media orale dell'alunn*
-                print(f"La media orale dell'alunn* {self.cognome} {self.nome} è {media}")
-            elif metodo == "p":                                                             # Se il metodo è "p", stampia la media pratica dell'alunn*
-                print(f"La media pratica dell'alunn* {self.cognome} {self.nome} è {media}")
+            if metodo == "g":                                                               # Se il metodo è "g", stampa la media generale dell'alunno/a
+                print(f"La media dell'alunno/a {self.cognome} {self.nome} è {media}")
+            elif metodo == "o":                                                             # Se il metodo è "o", stampa la media orale dell'alunno/a
+                print(f"La media orale dell'alunno/a {self.cognome} {self.nome} è {media}")
+            elif metodo == "p":                                                             # Se il metodo è "p", stampia la media pratica dell'alunno/a
+                print(f"La media pratica dell'alunno/a {self.cognome} {self.nome} è {media}")
         else:                                                                               # Se la lista numeri è vuota, stampa il messaggio appropriato.
             if metodo == "g":
-                print(f"L'alunn* {self.cognome} {self.nome} non ha voti")
+                print(f"L'alunno/a {self.cognome} {self.nome} non ha voti")
             elif metodo == "o":
-                print(f"L'alunn* {self.cognome} {self.nome} non ha voti orali")
+                print(f"L'alunno/a {self.cognome} {self.nome} non ha voti orali")
             elif metodo == "p":
-                print(f"L'alunn* {self.cognome} {self.nome} non ha voti pratici")
+                print(f"L'alunno/a {self.cognome} {self.nome} non ha voti pratici")
 
 
     def __listaVoti(self):
         voti = []                                                                           # Crea un vettore vuoto per memorizzare i voti
 
-        with open(self.parent_dir, 'r') as file:                                            # Apre il file dell'alunn* in modalità lettura
+        with open(self.parent_dir, 'r') as file:                                            # Apre il file dell'alunno/a in modalità lettura
             reader = csv.reader(file)                                                       # Crea un oggetto reader per leggere il contenuto del file CSV
             for riga in reader:                 
                 if len(riga) >= 3:                                                          # Controlla che ci siano almeno 3 colonne nella riga
@@ -104,7 +104,7 @@ class Alunno:
             print("3 - Vedere la media pratica")
             print("4 - Vedere la media orale")
             print("5 - Vedere la lista dei voti")
-            print("6 - Uscire dal profilo alunn*")
+            print("6 - Uscire dal profilo alunno/a")
 
             comando = input(" " + self.nome + " " + self.cognome + " >> ")                  # Richiede all'utente di scegliere un opzione
 
@@ -123,8 +123,8 @@ class Alunno:
                 for voto in voti:
                     colonna0, colonna1, tipo_compito = voto
                     print(f"{colonna0} {colonna1} {tipo_compito}")
-            elif comando == "6":                                                            # Ferma la funzione e fa uscire dal profilo alunn*
-                print("Sei uscito dal profilo alunn*")
+            elif comando == "6":                                                            # Ferma la funzione e fa uscire dal profilo alunno/a
+                print("Sei uscito dal profilo alunno/a")
                 break
             else:                                                                           # Comunica se il comando non è stato riconosciuto
                 print("Comando non riconosciuto.")

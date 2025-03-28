@@ -2,6 +2,7 @@ from MenuPrincipale import MenuPrincipale                                       
 import os
 import json
 import sys
+import Alunno
 
 if os.name == 'nt':                                                             # Win
     settings_file = "settings_win.json"
@@ -32,14 +33,14 @@ if len(sys.argv) > 1:                                                           
         nome = sys.argv[2].capitalize()
         cognome = sys.argv[3].capitalize()
 
-        nome_file = f"{cognome}{nome}.csv"                                      # Costruisce il nome del file del profilo dell'alunn*
+        nome_file = f"{cognome}{nome}.csv"                                      # Costruisce il nome del file del profilo dell'alunno/a
         filepath = os.path.join(controlpath, nome_file)                         # Crea il percorso completo del file
 
         if os.path.exists(filepath):                                            # Controlla se il file del profilo esiste
-            mioAlunno = mioAlunno(classe, parent_dir)
+            mioAlunno = Alunno.Alunno(filepath, nome, cognome)                  # Crea un'istanza della classe Alunno
             mioAlunno.menuAlunno()
         print(
-            f"Il profilo dell'alunn* {cognome} {nome} non esiste")              # Stampa un messaggio di errore se il profilo non esiste
+            f"Il profilo dell'alunno/a {cognome} {nome} non esiste")            # Stampa un messaggio di errore se il profilo non esiste
 
 
 print(command_path)                                                             # Stampa il percorso del file di configurazione e il valore della chiave 'workdir' dai dati letti

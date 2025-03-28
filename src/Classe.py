@@ -8,42 +8,42 @@ class Classe:
         self.nomeClasse = nomeClasse
         self.parent_dir = os.path.join(parent_dir, nomeClasse)
 
-    def __selezionaAlunno(self):                                                                        # Seleziona un profilo alunn* e avvia il menu dell'alunno
+    def __selezionaAlunno(self):                                                                        # Seleziona un profilo alunno/a e avvia il menu dell'alunno
         while True:
-            print("Inserire nome dell'alunn*")                                                          # Richiede di inserire il nome dell'alunn* e mette le iniziali maiuscole
+            print("Inserire nome dell'alunno/a")                                                        # Richiede di inserire il nome dell'alunno/a e mette le iniziali maiuscole
             nome = input(" ").capitalize()
-            print("Inserire cognome dell'alunn*")                                                       # Richiede all'utente di inserire il cognome dell'alunn* e mette le iniziali maiuscole
+            print("Inserire cognome dell'alunno/a")                                                     # Richiede all'utente di inserire il cognome dell'alunno/a e mette le iniziali maiuscole
             cognome = input(" ").capitalize()
 
-            nome_file = f"{cognome}{nome}.csv"                                                          # Costruisce il nome del file del profilo dell'alunn*
+            nome_file = f"{cognome}{nome}.csv"                                                          # Costruisce il nome del file del profilo dell'alunno/a
             filepath = os.path.join(self.parent_dir, nome_file)                                         # Crea il percorso completo del file
 
             if os.path.exists(filepath):                                                                # Controlla se il file del profilo esiste
-                mioAlunno = Alunno(filepath, nome, cognome)                                              # Avvia il menu dell'alunno per il profilo selezionato
+                mioAlunno = Alunno.Alunno(filepath, nome, cognome)                                      # Avvia il menu dell'alunno per il profilo selezionato
                 mioAlunno.menuAlunno()
                 break
-            print(f"Il profilo dell'alunn* {cognome} {nome} non esiste")                                # Stampa un messaggio di errore se il profilo non esiste
+            print(f"Il profilo dell'alunno/a {cognome} {nome} non esiste")                              # Stampa un messaggio di errore se il profilo non esiste
 
 
-    def __creaProfilo(self):                                                                            # Crea un profilo alunn*
-        print("Inserire il nome dell'alunn*")                                                           # Richiede all'utente di inserire il nome dell'alunn* e mette le iniziali maiuscole
+    def __creaProfilo(self):                                                                            # Crea un profilo alunno/a
+        print("Inserire il nome dell'alunno/a")                                                         # Richiede all'utente di inserire il nome dell'alunno/a e mette le iniziali maiuscole
         nome = input(" ").capitalize()
-        print("Inserire il cognome dell'alunn*")                                                        # Richiede all'utente di inserire il cognome dell'alunn* e mette le iniziali maiuscole
+        print("Inserire il cognome dell'alunno/a")                                                      # Richiede all'utente di inserire il cognome dell'alunno/a e mette le iniziali maiuscole
         cognome = input(" ").capitalize()
 
         while True:
-            print(f"Confermare la creazione dell'alunn* {cognome} {nome}? S/n")                         # Chiede all'utente di confermare la creazione del profilo
+            print(f"Confermare la creazione dell'alunno/a {cognome} {nome}? S/n")                       # Chiede all'utente di confermare la creazione del profilo
             conferma = input("").upper()                                                                # Legge l'input e lo converte in maiuscolo
             if conferma == "S":                                                                         # Se l'utente conferma la creazione del profilo
-                nome_file = f"{cognome}{nome}.csv"                                                      # Costruisce il nome del file del profilo dell'alunn*
+                nome_file = f"{cognome}{nome}.csv"                                                      # Costruisce il nome del file del profilo dell'alunno/a
                 filepath = os.path.join(self.parent_dir, nome_file)                                     # Crea il percorso completo del file
 
                 if os.path.exists(filepath):                                                            # Controlla se il profilo esiste già
-                    print(f"L'alunn* {cognome} {nome} esiste già")                                      # Stampa un messaggio di errore se esiste già
+                    print(f"L'alunno/a {cognome} {nome} esiste già")                                    # Stampa un messaggio di errore se esiste già
                 else:                                                                                   # Se il profilo non esiste
                     with open(filepath, 'w'):                                                           # Crea il file del profilo vuoto
                         pass
-                    print(f"Il profilo dell'alunn* {cognome} {nome} è stato creato correttamente")      # Stampa un messaggio di conferma per la creazione del profilo
+                    print(f"Il profilo dell'alunno/a {cognome} {nome} è stato creato correttamente")    # Stampa un messaggio di conferma per la creazione del profilo
                 break                                                                                   # Esce dal ciclo dopo la creazione del profilo
               
             elif conferma == "N":                                                                       # Se l'utente annulla la creazione del profilo.
@@ -59,10 +59,10 @@ class Classe:
         csv_files = [file for file in files if file.endswith('.csv')]                                   # Filtra solo i file CSV
 
         if len(csv_files) == 0:                                                                         # Se non ci sono file CSV
-            print("Non hai nessun profilo alunn* in questa classe")                                     # Stampa un messaggio informativo
+            print("Non hai nessun profilo alunno/a in questa classe")                                   # Stampa un messaggio informativo
             return
 
-        print("I nomi dei tuoi alunn* sono:")                                                           # Stampa l'intestazione per la lista dei profili degli alunni
+        print("I nomi dei tuoi alunno/a sono:")                                                         # Stampa l'intestazione per la lista dei profili degli alunni
         for file in csv_files:
             nome_formattato = Funzioni.format_file_name(file)                                           # Utilizza la funzione "format_file_name" per formattare il nome del file in modo leggibile
             print(nome_formattato)                                                                      # Stampa il nome formattato del profilo dell'alunno
@@ -111,43 +111,43 @@ class Classe:
         Funzioni.compito(self.parent_dir, data, tipo)                                                   # Se il tipo di compito inserito è valido, chiama la funzione "compito" del modulo "Funzioni" per aggiungere il compito alla classe
 
 
-    def __eliminaAlunno(self):                                                                          # Elimina un profilo alunn* dalla classe
-        print("Inserire nome dell'alunn*")                                                              # Richiede il nome dell'alunn*
+    def __eliminaAlunno(self):                                                                          # Elimina un profilo alunno/a dalla classe
+        print("Inserire nome dell'alunno/a")                                                            # Richiede il nome dell'alunno/a
         nome = input(" ").capitalize()
-        print("Inserire cognome dell'alunn*")                                                           # Richiede il cognome dell'alunn*
+        print("Inserire cognome dell'alunno/a")                                                         # Richiede il cognome dell'alunno/a
         cognome = input(" ").capitalize()
         
-        nome_file = f"{cognome}{nome}.csv"                                                              # Costruisce il nome del file del profilo dell'alunn*
-        filepath = os.path.join(self.parent_dir, nome_file)                                              # Crea il percorso completo del file
+        nome_file = f"{cognome}{nome}.csv"                                                              # Costruisce il nome del file del profilo dell'alunno/a
+        filepath = os.path.join(self.parent_dir, nome_file)                                             # Crea il percorso completo del file
     
         if os.path.exists(filepath):                                                                    # Se il file del profilo esiste
-            print(f"Sei sicuro di voler eliminare il profilo alunn* {cognome} {nome}? (S/n)")           # Chiede all'utente la conferma per l'eliminazione del profilo
+            print(f"Sei sicuro di voler eliminare il profilo alunno/a {cognome} {nome}? (S/n)")         # Chiede all'utente la conferma per l'eliminazione del profilo
             risposta = input(" ")
     
             if risposta == "S":                                                                         # Se l'utente conferma l'eliminazione del profilo
                 os.remove(filepath)                                                                     # Elimina il profilo
-                print(f"Il profilo alunn* di {cognome} {nome} è stata eliminata correttamente.")        # Stampa un messaggio di conferma
+                print(f"Il profilo alunno/a di {cognome} {nome} è stata eliminata correttamente.")      # Stampa un messaggio di conferma
             elif risposta == "n":                                                                       # Se l'utente annulla l'eliminazione del profilo
                 print("Operazione annullata")                                                           # Stampa un messaggio di conferma
             else:                                                                                       # Se l'utente inserisce un comando sconosciuto
                 print("Comando non riconosciuto")                                                       # Stampa un messaggio di errore
             return
     
-        print(f"Il profilo dell'alunn* {cognome} {nome} non esiste")                                    # Stampa un messaggio se il profilo dell'alunno non esiste
+        print(f"Il profilo dell'alunno/a {cognome} {nome} non esiste")                                  # Stampa un messaggio se il profilo dell'alunno non esiste
 
 
     def select_classe(self):                                                                            # Funzione che avvia il menu principale della classe con tutti i comandi disponibili
         while True:
             Funzioni.start()                                                                            # Chiama la funzione start() del modulo Funzioni
             print("")
-            print("1 - Selezionare un profilo alunn*")                                                  # Mostra le opzioni tra cui scegliere
-            print("2 - Creare un profilo alunn*")
-            print("3 - Vedere la lista degli alunn*")
+            print("1 - Selezionare un profilo alunno/a")                                                # Mostra le opzioni tra cui scegliere
+            print("2 - Creare un profilo alunno/a")
+            print("3 - Vedere la lista degli alunno/a")
             print("4 - Vedere la media generale di tutta la classe")
             print("5 - Vedere la media pratica di tutta la classe")
             print("6 - Vedere la media orale di tutta la classe")
             print("7 - Aggiungere un compito di classe")
-            print("8 - Eliminare un profilo alunn*")
+            print("8 - Eliminare un profilo alunno/a")
             print("9 - Uscire dalla classe")
             comando = input(" " + self.nomeClasse + " >> ")                                             # Richiede all'utente di scegliere un opzione
             print("")
